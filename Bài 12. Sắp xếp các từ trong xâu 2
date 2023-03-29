@@ -1,0 +1,31 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <bits/stdc++.h>
+#include <algorithm>
+using namespace std;
+bool comp(string a,string b){
+    return a.size()<b.size();
+}
+bool tn(string s){
+    string t=s;
+    reverse(s.begin(),s.end());
+    return s==t;
+}
+int main() {
+    string s;
+    vector<string>v;
+    set<string>se;
+    while(cin>>s){
+        if(se.count(s)==0&&tn(s)){
+            v.push_back(s);
+            se.insert(s);
+        }
+    }
+    stable_sort(v.begin(),v.end(),comp);
+    for(string x:v){
+        cout<<x<<' ';
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
