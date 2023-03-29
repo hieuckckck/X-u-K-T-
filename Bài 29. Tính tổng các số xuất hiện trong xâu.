@@ -1,0 +1,27 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <bits/stdc++.h>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    string s;
+    getline(cin,s);
+    for(char &x:s){
+        if(isalpha(x)){
+            x=' ';
+        }
+    }
+    stringstream ss(s);
+    vector <string>v;
+    string tmp;
+    long long tong=0;
+    while(ss>>tmp){
+        tong+=stoll(tmp);
+    }
+    cout<<tong<<endl;
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
