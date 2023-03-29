@@ -1,0 +1,25 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int chiadu(string n,int k){
+    int res=0;
+    for(int i=0;i<n.length();i++){
+       res=(res*10+n[i]-'0')%k;
+    }
+    return res;
+}
+int main() {
+    string n;
+    cin>>n;
+    int k=6;
+    if(chiadu(n,k)==0){
+        cout<<"YES";
+    }
+    else cout<<"NO";
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
