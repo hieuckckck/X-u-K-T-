@@ -1,0 +1,20 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    string s;
+    getline(cin,s);
+    s='0'+s;
+    int k=stoi(s.substr(s.length()-2));
+    if(k%25==0){
+        cout<<"YES";
+    }
+    else cout<<"NO";
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
