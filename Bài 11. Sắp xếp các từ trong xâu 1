@@ -1,0 +1,33 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+bool comp(string a,string b){
+    if(a.size()!=b.size()){
+        return a.size()<b.size();
+    }
+    else{
+        return a<b;
+    }
+}
+int main() {
+    string s;
+    vector<string>v;
+    while(cin>>s){
+        v.push_back(s);
+    }
+    sort(v.begin(),v.end());
+    for(string x:v){
+        cout<<x<<" ";
+    }
+    cout<<endl;
+    sort(v.begin(),v.end(),comp);
+    for(string x:v){
+        cout<<x<<" ";
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
