@@ -1,0 +1,34 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <bits/stdc++.h>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    string s;
+    getline(cin,s);
+    string res="",tmp;
+    stringstream ss(s);
+    while(ss>>tmp){
+        res+=toupper(tmp[0]);
+        for(int j=1;j<tmp.size();j++){
+            res+=tolower(tmp[j]);
+        }
+        res+=' ';
+    }
+    res.pop_back();
+    cout<<res<<endl;
+    string t;
+    getline(cin,t);
+    if(t[1]=='/'){
+        t="0"+t;
+    }
+    if(t[4]=='/'){
+        t.insert(3,"0");
+    }
+    cout<<t<<endl;
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
