@@ -1,0 +1,21 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int tcs(string s){
+    int sum=0;
+    for(char x:s){
+        sum=sum+x-'0';
+    }
+    return sum;
+}
+int main() {
+    string s;
+    cin>>s;
+    cout<<tcs(s);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
