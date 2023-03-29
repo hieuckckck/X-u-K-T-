@@ -1,0 +1,27 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    string s;
+    getline(cin,s);
+    int alpha=0,digit=0,special=0;
+    for(char x:s){
+        if(isdigit(x)){
+            ++digit;
+        }
+        else if(isalpha(x)){
+            ++alpha;
+        }
+        else{
+            ++special;
+        }
+    }
+    cout<<alpha<<' '<<digit<<' '<<special<<endl;
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
