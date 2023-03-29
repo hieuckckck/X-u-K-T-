@@ -1,0 +1,41 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+void chuanhoa(string &s){
+    for(char &x:s){
+        x=tolower(x);
+    }
+    s[0]=toupper(s[0]);
+}
+
+int main() {
+    vector<string>v;
+    string tmp;
+    while(cin>>tmp){
+        v.push_back(tmp);
+    }
+    int n=v.size();
+    transform(v[n-1].begin(),v[n-1].end(),v[n-1].begin(),::toupper);
+    for(int i=0;i<n-1;i++){
+        chuanhoa(v[i]);
+        cout<<v[i];
+        if(i!=n-2){
+            cout<<" ";
+        }
+        else cout<<", ";
+    }
+    cout<<v[n-1];
+   cout<<endl;
+    cout<<v[n-1]<<", ";
+    for(int i=0;i<n-1;i++){
+        cout<<v[i];
+        if(i!=n-2){
+            cout<<" ";
+        }
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
