@@ -1,0 +1,18 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    string s;
+    int dem=0;
+    while(cin>>s){
+        dem++;
+    }
+    cout<<dem;
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
