@@ -1,0 +1,31 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <bits/stdc++.h>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    string s1,s2;
+    getline(cin,s1);
+    getline(cin,s2);
+    transform(s1.begin(),s1.end(),s1.begin(),::tolower);
+    transform(s2.begin(),s2.end(),s2.begin(),::tolower);
+    set<string>se1,se2;
+    stringstream ss1(s1),ss2(s2);
+    string tmp;
+    while(ss1>>tmp){
+        se1.insert(tmp);
+    }
+    while(ss2>>tmp){
+        se2.insert(tmp);
+    }
+    for(string x:se1){
+        if(se2.count(x)==1){
+            cout<<x<<" ";
+        }
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
