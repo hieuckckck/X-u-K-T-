@@ -1,0 +1,32 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int nt(int n){
+    if(n<2) return 0;
+    else for(int i=2;i<=sqrt(n);i++){
+        if(n%i==0) return 0;
+    }
+    return 1;
+}
+int check(string s ){
+    int sum=0;
+    for(char x:s){
+        if(nt(x-'0')==0) return 0;
+        sum+=x-'0';
+    }
+    return nt(sum);
+}
+int main() {
+    string s;
+    cin>>s;
+    if(check(s)){
+        cout<<"YES";
+    }
+    else cout<<"NO";
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
