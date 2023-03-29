@@ -1,0 +1,28 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <bits/stdc++.h>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    string tmp;
+    set<string>se;
+    vector<string>v;
+    while(cin>>tmp){
+        if(se.count(tmp)==0){
+        se.insert(tmp);
+        v.push_back(tmp);
+        }
+    }
+    for(string x:se){
+        cout<<x<<" ";
+    }
+    cout<<endl;
+    for(string x:v){
+        cout<<x<<" ";
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
