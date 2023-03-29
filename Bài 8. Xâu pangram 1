@@ -1,0 +1,25 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    string s;
+    getline(cin,s);
+    transform(s.begin(),s.end(),s.begin(),::tolower);
+    int cnt[256]={0};
+    for(char x:s){
+        cnt[x]=1;
+    }
+    for(int i=97;i<=122;i++){
+        if(cnt[i]==0){
+            cout<<"NO";return 0;
+        }
+    }
+    cout<<"YES";
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
