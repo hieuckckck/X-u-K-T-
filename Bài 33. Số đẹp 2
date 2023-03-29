@@ -1,0 +1,36 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int tn(string s){
+    string tmp=s;
+    reverse(s.begin(),s.end());
+    return tmp==s;
+}
+//int tn(string s){
+// int l=0;int r=n-1;
+// while(l<=r){
+//     if(s[l]!=s[r]) return 0;
+//     l++;r--;
+// }
+// return 1;
+// }
+int check(string s){
+    for(char x:s){
+        if(x=='6'){
+            return 1;
+        }
+    }
+    return 0;
+}
+int main() {
+    string s;cin>>s;
+    if(tn(s)==1&&check(s)==1){
+        cout<<"YES";
+    }
+    else cout<<"NO";
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
